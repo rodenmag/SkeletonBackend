@@ -4,38 +4,146 @@ services:
   web:
     build: .
     command: python manage.py runserver 0.0.0.0:8000
+
     volumes:
       - .:/app:consistent
+
     ports:
       - "8000:8000"
+
     depends_on:
       - db
       - redis
+
+    # Automatically restart container
+    # after server reboot or container crash
+    restart: unless-stopped
+
   db:
     image: postgres
-    ports:
-      - '5432:5432'
+
     environment:
       - POSTGRES_DB=postgres
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
+
+    ports:
+      - "5432:5432"
+
+    # IMPORTANT:
+    # Persistent PostgreSQL database storage
+    # Database data will survive:
+    # - container recreation
+    # - docker compose down
+    # - server reboot
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+    # Automatically restart container
+    restart: unless-stopped
+
   redis:
     image: redis
+
     ports:
       - "6379:6379"
-  #celery:
-  #  build: .
-  #  command: celery -A time_tracking_be.celery worker -l info
-  #  volumes:
-  #    - .:/app:consistent
-  #  depends_on:
-  #    - redis
-  #    - db
-  #celery_beat:
-  #  build: .
-  #  command: celery -A time_tracking_be beat --scheduler django_celery_beat.schedulers:DatabaseScheduler
-  #  volumes:
-  #    - .:/app:consistent
-  #  depends_on:
-  #    - redis
-  #    - db
+
+    restart: unless-stopped
+
+  asgi:
+    build: .
+
+    command: uvicorn dms_be.asgi:application --host 0.0.0.0 --port 8000
+
+    volumes:
+      - .:/app:consistent
+
+    ports:
+      - "8001:8000"
+
+    depends_on:
+      - redis
+
+    restart: unless-stopped
+
+  celery:
+    build: .
+
+    command: celery -A dms_be.celery worker -l info
+
+    volumes:
+      - .:/app:consistent
+
+    depends_on:
+      - redis
+      - db
+
+    restart: unless-stopped
+
+  celery_beat:
+    build: .
+
+    command: celery -A dms_be beat --scheduler django_celery_beat.schedulers:DatabaseScheduler
+
+    volumes:
+      - .:/app:consistent
+
+    depends_on:
+      - redis
+      - db
+
+    restart: unless-stopped
+
+
+# Named Docker volume for PostgreSQL persistence
+volumes:
+  postgres_data:
+
+#services:
+#  web:
+#    build: .
+#    command: python manage.py runserver 0.0.0.0:8000
+#    volumes:
+#      - .:/app:consistent
+#    ports:
+#      - "8000:8000"
+#    depends_on:
+#      - db
+#      - redis
+#  db:
+#    image: postgres
+#    ports:
+#      - '5432:5432'
+#    environment:
+#      - POSTGRES_DB=postgres
+#      - POSTGRES_USER=postgres
+#      - POSTGRES_PASSWORD=postgres
+#  redis:
+#    image: redis
+#    ports:
+#      - "6379:6379"
+#  asgi:
+#    build: .
+#    command: uvicorn dms_be.asgi:application --host 0.0.0.0 --port 8000
+#    volumes:
+#      - .:/app:consistent
+#    ports:
+#      - "8001:8000"   # expose ASGI on a different host port
+#    depends_on:
+#      - redis
+#  celery:
+#    build: .
+#    command: celery -A dms_be.celery worker -l info
+#    volumes:
+#      - .:/app:consistent
+#    depends_on:
+#      - redis
+#      - db
+#  celery_beat:
+#    build: .
+#    command: celery -A dms_be beat --scheduler django_celery_beat.schedulers:DatabaseScheduler
+#    volumes:
+#      - .:/app:consistent
+#    depends_on:
+#      - redis
+#      - db

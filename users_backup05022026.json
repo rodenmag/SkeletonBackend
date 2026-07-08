@@ -1,0 +1,641 @@
+[
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$97c9AHP7E078Cqm8SNECkF$v0Eola1ZfuNiugiZcIJicCoCyzcph4i2S81y9kAQqZ4=",
+        "last_login": "2026-05-02T05:05:33Z",
+        "is_superuser": true,
+        "username": "admin-roden",
+        "first_name": "Roden",
+        "last_name": "Magat",
+        "email": "rlmagat@qcrblive.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-02-24T08:10:33Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 4,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$q2FDkGP9f2v5FIWEhWtS92$H94sMZup1MOP+B1BPk9Yylp59cxjunPsEJ4F3EW7MVE=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "approver",
+        "first_name": "Approver",
+        "last_name": "Test",
+        "email": "rodenmag@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2026-04-27T05:06:51.394Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 5,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$8MtnUc0sL9r3eUDbYxOSv6$UVUubjkTU1IbLbxP+A9K4kQXnA+JbcdefDYzAdBKnHY=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "viewer",
+        "first_name": "Viewer/Uploader",
+        "last_name": "Test",
+        "email": "rodenmag@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2026-04-27T05:08:05.394Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 6,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$wHnUzl54CAstH6SJhhsjqF$FxC0UMGGAYEBNMGttyppJ+P+RT2uew63zEtbush4YVA=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "uploader",
+        "first_name": "Uploader",
+        "last_name": "Test",
+        "email": "rodenmag@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2026-04-27T05:08:29.833Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 7,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$a28lVMTUADTmj1b4P3Ql74$Pw1diN/KXmcRv75UHHBinqUlg1oBxvXFiyjKoSWLmdg=",
+        "last_login": null,
+        "is_superuser": true,
+        "username": "bac",
+        "first_name": "BA",
+        "last_name": "Beech",
+        "email": "bab@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-02T06:17:45.130Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "User.branch",
+    "pk": 1,
+    "fields": {
+        "name": "None",
+        "code": "None",
+        "status": true
+    }
+},
+{
+    "model": "User.branch",
+    "pk": 2,
+    "fields": {
+        "name": "Head Office",
+        "code": "00",
+        "status": true
+    }
+},
+{
+    "model": "User.branch",
+    "pk": 3,
+    "fields": {
+        "name": "Lucena Main",
+        "code": "01",
+        "status": true
+    }
+},
+{
+    "model": "User.branch",
+    "pk": 4,
+    "fields": {
+        "name": "Candelaria",
+        "code": "02",
+        "status": true
+    }
+},
+{
+    "model": "User.branch",
+    "pk": 5,
+    "fields": {
+        "name": "Quezon Avenue",
+        "code": "03",
+        "status": true
+    }
+},
+{
+    "model": "User.branch",
+    "pk": 6,
+    "fields": {
+        "name": "Sariaya",
+        "code": "04",
+        "status": true
+    }
+},
+{
+    "model": "User.branch",
+    "pk": 7,
+    "fields": {
+        "name": "Pagbilao",
+        "code": "05",
+        "status": true
+    }
+},
+{
+    "model": "User.branch",
+    "pk": 8,
+    "fields": {
+        "name": "Padre Burgos",
+        "code": "06",
+        "status": true
+    }
+},
+{
+    "model": "User.branch",
+    "pk": 9,
+    "fields": {
+        "name": "Mauban",
+        "code": "07",
+        "status": true
+    }
+},
+{
+    "model": "User.branch",
+    "pk": 10,
+    "fields": {
+        "name": "Corporate Tower",
+        "code": "08",
+        "status": true
+    }
+},
+{
+    "model": "User.branch",
+    "pk": 11,
+    "fields": {
+        "name": "Atimonan",
+        "code": "09",
+        "status": true
+    }
+},
+{
+    "model": "User.branch",
+    "pk": 12,
+    "fields": {
+        "name": "Tiaong",
+        "code": "10",
+        "status": true
+    }
+},
+{
+    "model": "User.branch",
+    "pk": 13,
+    "fields": {
+        "name": "Lucban",
+        "code": "11",
+        "status": true
+    }
+},
+{
+    "model": "User.branch",
+    "pk": 14,
+    "fields": {
+        "name": "Lopez",
+        "code": "12",
+        "status": true
+    }
+},
+{
+    "model": "User.branch",
+    "pk": 15,
+    "fields": {
+        "name": "Catanauan",
+        "code": "13",
+        "status": true
+    }
+},
+{
+    "model": "User.branch",
+    "pk": 16,
+    "fields": {
+        "name": "Tayabas",
+        "code": "14",
+        "status": true
+    }
+},
+{
+    "model": "User.branch",
+    "pk": 17,
+    "fields": {
+        "name": "Infanta",
+        "code": "15",
+        "status": true
+    }
+},
+{
+    "model": "User.branch",
+    "pk": 18,
+    "fields": {
+        "name": "Calauag",
+        "code": "16",
+        "status": true
+    }
+},
+{
+    "model": "User.branch",
+    "pk": 19,
+    "fields": {
+        "name": "Tagkawayan",
+        "code": "17",
+        "status": true
+    }
+},
+{
+    "model": "User.branch",
+    "pk": 20,
+    "fields": {
+        "name": "Gumaca",
+        "code": "18",
+        "status": true
+    }
+},
+{
+    "model": "User.branch",
+    "pk": 21,
+    "fields": {
+        "name": "Mulanay",
+        "code": "19",
+        "status": true
+    }
+},
+{
+    "model": "User.branch",
+    "pk": 22,
+    "fields": {
+        "name": "Real",
+        "code": "20",
+        "status": true
+    }
+},
+{
+    "model": "User.branch",
+    "pk": 23,
+    "fields": {
+        "name": "Luisiana",
+        "code": "21",
+        "status": true
+    }
+},
+{
+    "model": "User.branch",
+    "pk": 24,
+    "fields": {
+        "name": "San Francisco",
+        "code": "22",
+        "status": true
+    }
+},
+{
+    "model": "User.branch",
+    "pk": 25,
+    "fields": {
+        "name": "San Narciso",
+        "code": "23",
+        "status": true
+    }
+},
+{
+    "model": "User.branch",
+    "pk": 26,
+    "fields": {
+        "name": "Guinayangan",
+        "code": "24",
+        "status": true
+    }
+},
+{
+    "model": "User.branch",
+    "pk": 27,
+    "fields": {
+        "name": "Calauan",
+        "code": "25",
+        "status": true
+    }
+},
+{
+    "model": "User.branch",
+    "pk": 28,
+    "fields": {
+        "name": "Nagcarlan",
+        "code": "26",
+        "status": true
+    }
+},
+{
+    "model": "User.branch",
+    "pk": 29,
+    "fields": {
+        "name": "San Juan",
+        "code": "27",
+        "status": true
+    }
+},
+{
+    "model": "User.branch",
+    "pk": 30,
+    "fields": {
+        "name": "San Jose",
+        "code": "28",
+        "status": true
+    }
+},
+{
+    "model": "User.branch",
+    "pk": 31,
+    "fields": {
+        "name": "Alaminos",
+        "code": "29",
+        "status": true
+    }
+},
+{
+    "model": "User.branch",
+    "pk": 32,
+    "fields": {
+        "name": "Cainta (Rizal)",
+        "code": "30",
+        "status": true
+    }
+},
+{
+    "model": "User.branch",
+    "pk": 33,
+    "fields": {
+        "name": "Rosario",
+        "code": "32",
+        "status": true
+    }
+},
+{
+    "model": "User.branch",
+    "pk": 34,
+    "fields": {
+        "name": "Sto. Tomas",
+        "code": "33",
+        "status": true
+    }
+},
+{
+    "model": "User.branch",
+    "pk": 35,
+    "fields": {
+        "name": "Siniloan",
+        "code": "34",
+        "status": true
+    }
+},
+{
+    "model": "User.branch",
+    "pk": 36,
+    "fields": {
+        "name": "Sta. Cruz",
+        "code": "35",
+        "status": true
+    }
+},
+{
+    "model": "User.branch",
+    "pk": 37,
+    "fields": {
+        "name": "Lucena-Isabang",
+        "code": "37",
+        "status": true
+    }
+},
+{
+    "model": "User.branch",
+    "pk": 38,
+    "fields": {
+        "name": "Rizal Branch-Lite",
+        "code": "No Code",
+        "status": true
+    }
+},
+{
+    "model": "User.branch",
+    "pk": 39,
+    "fields": {
+        "name": "Lucena Dupay",
+        "code": "38",
+        "status": true
+    }
+},
+{
+    "model": "User.department",
+    "pk": 1,
+    "fields": {
+        "name": "None",
+        "status": true
+    }
+},
+{
+    "model": "User.department",
+    "pk": 2,
+    "fields": {
+        "name": "Office of the Executive Vice President",
+        "status": true
+    }
+},
+{
+    "model": "User.department",
+    "pk": 3,
+    "fields": {
+        "name": "Office of the Corporate Secretary",
+        "status": true
+    }
+},
+{
+    "model": "User.department",
+    "pk": 4,
+    "fields": {
+        "name": "Compliance Department",
+        "status": true
+    }
+},
+{
+    "model": "User.department",
+    "pk": 5,
+    "fields": {
+        "name": "Internal Audit Department",
+        "status": true
+    }
+},
+{
+    "model": "User.department",
+    "pk": 6,
+    "fields": {
+        "name": "Human Resources Department",
+        "status": true
+    }
+},
+{
+    "model": "User.department",
+    "pk": 7,
+    "fields": {
+        "name": "Treasury Department",
+        "status": true
+    }
+},
+{
+    "model": "User.department",
+    "pk": 8,
+    "fields": {
+        "name": "Branch Banking Department",
+        "status": true
+    }
+},
+{
+    "model": "User.department",
+    "pk": 9,
+    "fields": {
+        "name": "Information Technology Department",
+        "status": true
+    }
+},
+{
+    "model": "User.department",
+    "pk": 10,
+    "fields": {
+        "name": "General Services Department",
+        "status": true
+    }
+},
+{
+    "model": "User.department",
+    "pk": 11,
+    "fields": {
+        "name": "Risk Management Department",
+        "status": true
+    }
+},
+{
+    "model": "User.department",
+    "pk": 12,
+    "fields": {
+        "name": "Marketing Department",
+        "status": true
+    }
+},
+{
+    "model": "User.department",
+    "pk": 13,
+    "fields": {
+        "name": "Loans Department",
+        "status": true
+    }
+},
+{
+    "model": "User.department",
+    "pk": 14,
+    "fields": {
+        "name": "Accounting Department",
+        "status": true
+    }
+},
+{
+    "model": "User.department",
+    "pk": 15,
+    "fields": {
+        "name": "Business Development Department",
+        "status": true
+    }
+},
+{
+    "model": "User.department",
+    "pk": 16,
+    "fields": {
+        "name": "Branch Operations Department",
+        "status": true
+    }
+},
+{
+    "model": "User.userprofile",
+    "pk": 1,
+    "fields": {
+        "user": 1,
+        "employee_id": "17-0221-0018",
+        "user_page": true,
+        "uploader": true,
+        "approver": true,
+        "branch_id": 1,
+        "department_id": 1,
+        "ai_helper": false
+    }
+},
+{
+    "model": "User.userprofile",
+    "pk": 4,
+    "fields": {
+        "user": 4,
+        "employee_id": null,
+        "user_page": false,
+        "uploader": false,
+        "approver": true,
+        "branch_id": 1,
+        "department_id": 1,
+        "ai_helper": false
+    }
+},
+{
+    "model": "User.userprofile",
+    "pk": 5,
+    "fields": {
+        "user": 5,
+        "employee_id": null,
+        "user_page": false,
+        "uploader": false,
+        "approver": false,
+        "branch_id": 1,
+        "department_id": 1,
+        "ai_helper": false
+    }
+},
+{
+    "model": "User.userprofile",
+    "pk": 6,
+    "fields": {
+        "user": 6,
+        "employee_id": null,
+        "user_page": false,
+        "uploader": true,
+        "approver": false,
+        "branch_id": 1,
+        "department_id": 1,
+        "ai_helper": false
+    }
+},
+{
+    "model": "User.userprofile",
+    "pk": 7,
+    "fields": {
+        "user": 7,
+        "employee_id": "143-2123412",
+        "user_page": true,
+        "uploader": true,
+        "approver": true,
+        "branch_id": 1,
+        "department_id": 1,
+        "ai_helper": true
+    }
+}
+]
